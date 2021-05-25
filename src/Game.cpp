@@ -39,7 +39,7 @@ int Game::run() {
 
     gf::Time time = clock.restart();
     world->update(time);
-    view.display();
+    view.display(time);
   }
     return EXIT_SUCCESS;
 }

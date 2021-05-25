@@ -18,3 +18,4 @@ target_link_libraries(estulia gf0 gfcore0)
 
 
 file(COPY Monospace.ttf DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY data/carrier_walk.png DESTINATION ${CMAKE_BINARY_DIR}/data)
