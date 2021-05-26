@@ -12,7 +12,7 @@ World::World(int width, int height): width_(width), height_(height) {
     }
 }
 World::~World(){
-    delete elevation_;
+    delete[] elevation_;
 }
 
 void World::update(gf::Time /*time*/) {
