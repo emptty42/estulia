@@ -14,7 +14,7 @@ class View {
     std::shared_ptr<gf::RenderWindow> renderer_;
 
     gf::Animation animation_[6];
-
+    gf::Texture texture_{"data/carrier_walk.png"};
 
     std::vector<gf::AnimatedSprite> walkers_;
 
