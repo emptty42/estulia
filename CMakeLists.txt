@@ -9,10 +9,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 link_directories(/opt/gamedev/lib)
 include_directories(/opt/gamedev/include)
 
+include_directories(src)
 add_executable(estulia  # Entity.cpp Entity.hpp
+                        src/Direction.hpp
                         src/Game.cpp   src/Game.hpp
                         src/View.cpp   src/View.hpp
                         src/World.cpp  src/World.hpp
+			src/Walker.cpp src/Walker.hpp
                         )
 target_link_libraries(estulia gf0 gfcore0)
 

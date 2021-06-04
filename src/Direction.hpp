@@ -1,0 +1,8 @@
+
+#ifndef ESTULIA_DIRECTION_HPP
+#define ESTULIA_DIRECTION_HPP
+
+enum class Direction {
+  EAST=0, NORTH_EAST, NORTH_WEST, WEST, SOUTH_WEST, SOUTH_EAST
+};
+#endif

@@ -1,5 +1,5 @@
-#ifndef INCLUDE_GAME_HPP
-#define INCLUDE_GAME_HPP
+#ifndef ESTULIA_GAME_HPP
+#define ESTULIA_GAME_HPP
 
 #include <gf/RenderWindow.h>
 #include <gf/Window.h>

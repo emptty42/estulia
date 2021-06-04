@@ -17,6 +17,8 @@ int Game::run() {
 
   gf::Clock clock;
 
+  auto walker = world->makeWalker(320, 240); 
+
   while (window_.isOpen()) {
     gf::Event event;
 

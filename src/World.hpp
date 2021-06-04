@@ -1,6 +1,10 @@
-#ifndef INCLUDE_WORLD_HPP
-#define INCLUDE_WORLD_HPP
+#ifndef ESTULIA_WORLD_HPP
+#define ESTULIA_WORLD_HPP
 
+#include <Walker.hpp>
+
+#include <gf/Animation.h>
+#include <gf/Texture.h>
 #include <gf/Time.h>
 
 class View;
@@ -13,6 +17,12 @@ class World {
     int width_;
     int height_;
     int *elevation_;
+    std::vector<Walker*> walkers_;
+
+    /* Hold the memory for all graphical resources */
+    gf::Animation animation_[6];
+    gf::Texture texture_{"data/carrier_walk.png"};
+
 public:
     World(int width, int height);
     ~World();
@@ -28,9 +38,11 @@ public:
     }
 
     void update(gf::Time time);
-
     bool running() { return running_;}
     void stop() {running_ = false;}
+
+    Walker* makeWalker(float x, float y);
+    const std::vector<Walker*>& getWalkers() const;
 };
 
 #endif
